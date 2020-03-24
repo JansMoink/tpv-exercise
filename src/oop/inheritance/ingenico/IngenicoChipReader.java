@@ -6,6 +6,20 @@ import oop.inheritance.data.ExpirationDate;
 
 public class IngenicoChipReader {
 
+    private static IngenicoChipReader ingenicoChipReader = null;
+
+    private IngenicoChipReader(){
+
+    }
+
+    public static IngenicoChipReader getInstance(){
+        if(ingenicoChipReader == null){
+            ingenicoChipReader = new IngenicoChipReader();
+        }
+
+        return ingenicoChipReader;
+    }
+
     public Card readCard() {
         return Card.builder()
                 .account("4558211532252558")
