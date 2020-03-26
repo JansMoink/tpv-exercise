@@ -1,4 +1,4 @@
-package oop.inheritance.verifone.v240m.;
+package oop.inheritance.verifone.v240m;
 
 import java.util.Properties;
 

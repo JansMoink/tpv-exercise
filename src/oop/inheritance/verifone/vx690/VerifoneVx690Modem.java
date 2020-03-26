@@ -1,4 +1,4 @@
-package oop.inheritance.verifone.vx690.;
+package oop.inheritance.verifone.vx690;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
@@ -12,7 +12,7 @@ public class VerifoneVx690Modem {
     }
 
     public static VerifoneVx690Modem getInstance(){
-        If(verifoneVx690Modem == null){
+        if(verifoneVx690Modem == null){
             verifoneVx690Modem = new VerifoneVx690Modem();
         }
         return verifoneVx690Modem;

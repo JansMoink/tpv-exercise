@@ -12,7 +12,7 @@ public class IngenicoModem {
     }
 
     public static IngenicoModem getInstance(){
-        If(ingenicoModem == null){
+        if(ingenicoModem == null){
             ingenicoModem = new IngenicoModem();
         }
         return ingenicoModem;

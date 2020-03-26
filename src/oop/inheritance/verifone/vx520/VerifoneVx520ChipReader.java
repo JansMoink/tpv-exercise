@@ -1,4 +1,4 @@
-package oop.inheritance.verifone.vx520.;
+package oop.inheritance.verifone.vx520;
 
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;

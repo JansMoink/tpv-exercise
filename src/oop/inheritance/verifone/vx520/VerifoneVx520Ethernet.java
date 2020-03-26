@@ -1,4 +1,4 @@
-package oop.inheritance.verifone.vx520.;
+package oop.inheritance.verifone.vx520;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
