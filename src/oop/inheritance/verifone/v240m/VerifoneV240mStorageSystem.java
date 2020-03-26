@@ -1,8 +1,20 @@
-package oop.inheritance.verifone.v240m;
+package oop.inheritance.verifone.v240m.;
 
 import java.util.Properties;
 
 public class VerifoneV240mStorageSystem {
+    private static VerifoneV240mStorageSystem verifoneV240mStorageSystem = null;
+
+    private VerifoneV240mStorageSystem(){
+
+    }
+
+    public static VerifoneV240mStorageSystem getInstance(){
+        if(verifoneV240mStorageSystem == null){
+            verifoneV240mStorageSystem = new VerifoneV240mStorageSystem();
+        }
+        return verifoneV240mStorageSystem;
+    }
 
     private Properties properties = new Properties();
 

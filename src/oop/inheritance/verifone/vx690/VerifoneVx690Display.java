@@ -1,6 +1,20 @@
-package oop.inheritance.verifone.vx690;
+package oop.inheritance.verifone.vx690.;
 
 public class VerifoneVx690Display {
+
+    private static VerifoneVx690Display verifoneVx690Display = null;
+
+    private VerifoneVx690Display(){
+
+    }
+
+    public static VerifoneVx690Display getInstance(){
+        if(verifoneVx690Display == null){
+            verifoneVx690Display = new VerifoneVx690Display();
+        }
+        
+        return verifoneVx690Display;
+    }
 
     /**
      * Prints a message to specied position

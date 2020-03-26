@@ -90,7 +90,7 @@ public class Application {
     }
 
     private void printReceipt(Transaction transaction, String hostReference) {
-        IngenicoPrinter ingenicoPrinter = new IngenicoPrinter();
+        IngenicoPrinter ingenicoPrinter = IngenicoPrinter.getInstance();
         Card card = transaction.getCard();
 
         ingenicoPrinter.print(5, "APROBADA");
@@ -104,9 +104,9 @@ public class Application {
     }
 
     private TransactionResponse sendSale(Transaction transaction) {
-        IngenicoEthernet ethernet = new IngenicoEthernet();
-        IngenicoModem modem = new IngenicoModem();
-        IngenicoGPS gps = new IngenicoGPS();
+        IngenicoEthernet ethernet = IngenicoEthernet.getInstance();
+        IngenicoModem modem = IngenicoModem.getInstance();
+        IngenicoGPS gps = IngenicoGPS.getInstance();
         TransactionResponse transactionResponse = null;
 
         switch (communicationType) {

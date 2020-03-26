@@ -1,6 +1,22 @@
-package oop.inheritance.verifone.vx690;
+package oop.inheritance.verifone.vx690.;
+
+import oop.inheritance.data.Transaction;
+import oop.inheritance.data.TransactionResponse;
 
 public class VerifoneVx690Ethernet {
+
+    private static VerifoneVx690Ethernet verifoneVx690Ethernet = null;
+
+    private VerifoneVx690Ethernet(){
+
+    }
+
+    public static VerifoneVx690Ethernet getInstance(){
+        if(verifoneVx690Ethernet == null){
+            verifoneVx690Ethernet = new VerifoneVx690Ethernet();
+        }
+        return verifoneVx690Ethernet;
+    }
 
     /**
      * Opens a connection using the ethernet device
@@ -15,10 +31,10 @@ public class VerifoneVx690Ethernet {
     /**
      * Sends a message to the server
      *
-     * @param message message to be sent to the server
+     * @param transaction message to be sent to the server
      * @return true if the message was sent successfully, false otherwise
      */
-    public boolean send(byte[] message) {
+    public boolean send(Transaction transaction) {
         return true;
     }
 
@@ -27,8 +43,8 @@ public class VerifoneVx690Ethernet {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public byte[] receive() {
-        return "response".getBytes();
+    public TransactionResponse receive() {
+        return new TransactionResponse(true, "12314");
     }
 
     /**

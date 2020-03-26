@@ -12,6 +12,7 @@ public class VerifoneV240mDisplay {
         if(verifoneV240mDisplay == null){
             verifoneV240mDisplay = new VerifoneV240mDisplay();
         }
+        
         return verifoneV240mDisplay;
     }
 

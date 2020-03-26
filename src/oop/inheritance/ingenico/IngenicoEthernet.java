@@ -5,6 +5,19 @@ import oop.inheritance.data.TransactionResponse;
 
 public class IngenicoEthernet {
 
+    private static IngenicoEthernet ingenicoEthernet = null;
+
+    private IngenicoEthernet(){
+
+    }
+
+    public static IngenicoEthernet getInstance(){
+        if(ingenicoEthernet == null){
+            ingenicoEthernet = new IngenicoEthernet();
+        }
+        return ingenicoEthernet;
+    }
+
     /**
      * Opens a connection using the ethernet device
      *
