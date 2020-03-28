@@ -73,11 +73,11 @@ public class Application {
 
         String amount = ingenicoKeyboard.get(); //Amount with decimal point as string
 
-        Transaction transaction = new Transaction();
-
-        transaction.setLocalDateTime(LocalDateTime.now());
-        transaction.setCard(card);
-        transaction.setAmountInCents(Integer.parseInt(amount.replace(".", "")));
+        Transaction transaction = Transaction.builder()
+                .localDateTime(LocalDateTime.now())
+                .card(card)
+                .amountInCents(Integer.parseInt(amount.replace(".", "")))
+                .build();
 
         TransactionResponse response = sendSale(transaction);
 
