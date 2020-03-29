@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.vx520;
 
-public class VerifoneVx520Printer {
+import oop.inheritance.TPV.Printer;
+
+public class VerifoneVx520Printer implements Printer {
 
     private static VerifoneVx520Printer verifoneVx520Printer = null;
 

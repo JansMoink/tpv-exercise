@@ -1,8 +1,10 @@
 package oop.inheritance.verifone.vx690;
 
+import oop.inheritance.TPV.StorageSystem;
+
 import java.util.Properties;
 
-public class VerifoneVx690StorageSystem {
+public class VerifoneVx690StorageSystem implements StorageSystem {
     private static VerifoneVx690StorageSystem verifoneVx690StorageSystem = null;
 
     private VerifoneVx690StorageSystem(){

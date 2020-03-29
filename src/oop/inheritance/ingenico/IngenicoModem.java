@@ -1,9 +1,10 @@
 package oop.inheritance.ingenico;
 
+import oop.inheritance.TPV.Modem;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
 
-public class IngenicoModem {
+public class IngenicoModem implements Modem {
 
     private static IngenicoModem ingenicoModem = null;
 

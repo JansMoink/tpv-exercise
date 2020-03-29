@@ -1,13 +1,16 @@
 package oop.inheritance;
 
 import oop.inheritance.data.SupportedTerminal;
+import oop.inheritance.TPV.AbstractTPVFactory;
 
 public class Main {
 
     public static void main(String[] args) {
-        Application application = new Application(SupportedTerminal.INGENICO);
+        boolean running = true;
+        AbstractTPVFactory factory = AbstractTPVFactory.getFactory(SupportedTerminal.INGENICO);
+        Application application= new Application(factory);
 
-        while (true) {
+        while (running) {
             application.clearScreen();
             application.showMenu();
 
@@ -25,6 +28,9 @@ public class Main {
                     break;
                 case "4":
                     application.showConfiguration();
+                    break;
+                case "5":
+                    running = false;
                     break;
             }
         }

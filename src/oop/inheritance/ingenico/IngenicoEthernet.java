@@ -1,9 +1,10 @@
 package oop.inheritance.ingenico;
 
+import oop.inheritance.TPV.Ethernet;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
 
-public class IngenicoEthernet {
+public class IngenicoEthernet implements Ethernet {
 
     private static IngenicoEthernet ingenicoEthernet = null;
 

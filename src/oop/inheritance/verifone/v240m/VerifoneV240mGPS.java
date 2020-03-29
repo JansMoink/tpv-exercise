@@ -1,9 +1,10 @@
 package oop.inheritance.verifone.v240m;
 
+import oop.inheritance.TPV.GPS;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
 
-public class VerifoneV240mGPS {
+public class VerifoneV240mGPS implements GPS {
     private static VerifoneV240mGPS verifoneV240mGPS = null;
 
     private VerifoneV240mGPS(){

@@ -1,6 +1,8 @@
 package oop.inheritance.ingenico;
 
-public class IngenicoKeyboard {
+import oop.inheritance.TPV.Keyboard;
+
+public class IngenicoKeyboard implements Keyboard {
 
     private static IngenicoKeyboard ingenicoKeyboard = null;
 

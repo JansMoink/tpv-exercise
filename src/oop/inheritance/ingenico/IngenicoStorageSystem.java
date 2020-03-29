@@ -1,8 +1,10 @@
 package oop.inheritance.ingenico;
 
+import oop.inheritance.TPV.StorageSystem;
+
 import java.util.Properties;
 
-public class IngenicoStorageSystem {
+public class IngenicoStorageSystem implements StorageSystem {
 
     private static IngenicoStorageSystem ingenicoStorageSystem = null;
 

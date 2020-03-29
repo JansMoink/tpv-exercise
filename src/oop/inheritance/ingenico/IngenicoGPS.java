@@ -1,9 +1,10 @@
 package oop.inheritance.ingenico;
 
+import oop.inheritance.TPV.GPS;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
 
-public class IngenicoGPS {
+public class IngenicoGPS implements GPS {
     private static IngenicoGPS ingenicoGPS = null;
 
     private IngenicoGPS(){

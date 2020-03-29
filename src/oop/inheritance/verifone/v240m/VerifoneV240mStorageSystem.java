@@ -1,8 +1,10 @@
 package oop.inheritance.verifone.v240m;
 
+import oop.inheritance.TPV.StorageSystem;
+
 import java.util.Properties;
 
-public class VerifoneV240mStorageSystem {
+public class VerifoneV240mStorageSystem implements StorageSystem {
     private static VerifoneV240mStorageSystem verifoneV240mStorageSystem = null;
 
     private VerifoneV240mStorageSystem(){

@@ -1,9 +1,10 @@
 package oop.inheritance.verifone.vx520;
 
+import oop.inheritance.TPV.Modem;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
 
-public class VerifoneVx520Modem {
+public class VerifoneVx520Modem implements Modem {
 
     private static VerifoneVx520Modem verifoneVx520Modem = null;
 

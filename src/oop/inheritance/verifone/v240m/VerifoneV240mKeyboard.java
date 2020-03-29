@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.v240m;
 
-public class VerifoneV240mKeyboard {
+import oop.inheritance.TPV.Keyboard;
+
+public class VerifoneV240mKeyboard implements Keyboard {
 
     private static VerifoneV240mKeyboard verifoneV240mKeyboard = null;
 

@@ -1,10 +1,11 @@
 package oop.inheritance.verifone.v240m;
 
+import oop.inheritance.TPV.ChipReader;
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
 
-public class VerifoneV240mChipReader {
+public class VerifoneV240mChipReader implements ChipReader {
 
     private static VerifoneV240mChipReader verifoneV240mChipReader = null;
 

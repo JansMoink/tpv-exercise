@@ -1,10 +1,11 @@
 package oop.inheritance.ingenico;
 
+import oop.inheritance.TPV.CardSwipper;
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
 
-public class IngenicoCardSwipper {
+public class IngenicoCardSwipper implements CardSwipper {
 
     private static IngenicoCardSwipper ingenicoCardSwipper = null;
 

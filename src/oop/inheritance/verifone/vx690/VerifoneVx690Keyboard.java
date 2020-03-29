@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.vx690;
 
-public class VerifoneVx690Keyboard {
+import oop.inheritance.TPV.Keyboard;
+
+public class VerifoneVx690Keyboard implements Keyboard {
 
     private static VerifoneVx690Keyboard verifoneVx690Keyboard = null;
 

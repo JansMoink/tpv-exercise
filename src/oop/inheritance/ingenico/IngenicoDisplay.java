@@ -1,6 +1,8 @@
 package oop.inheritance.ingenico;
 
-public class IngenicoDisplay {
+import oop.inheritance.TPV.Display;
+
+public class IngenicoDisplay implements Display {
 
     private static IngenicoDisplay ingenicoDisplay = null;
 

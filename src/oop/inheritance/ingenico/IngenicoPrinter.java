@@ -1,6 +1,8 @@
 package oop.inheritance.ingenico;
 
-public class IngenicoPrinter {
+import oop.inheritance.TPV.Printer;
+
+public class IngenicoPrinter implements Printer {
 
     private static IngenicoPrinter ingenicoPrinter = null;
 

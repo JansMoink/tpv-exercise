@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.v240m;
 
-public class VerifoneV240mDisplay {
+import oop.inheritance.TPV.Display;
+
+public class VerifoneV240mDisplay implements Display {
 
     private static VerifoneV240mDisplay verifoneV240mDisplay = null;
 

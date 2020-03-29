@@ -1,10 +1,11 @@
 package oop.inheritance.ingenico;
 
+import oop.inheritance.TPV.ChipReader;
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
 
-public class IngenicoChipReader {
+public class IngenicoChipReader implements ChipReader {
 
     private static IngenicoChipReader ingenicoChipReader = null;
 

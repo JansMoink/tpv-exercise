@@ -1,10 +1,11 @@
 package oop.inheritance.verifone.vx690;
 
+import oop.inheritance.TPV.CardSwipper;
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
 
-public class VerifoneVx690CardSwipper {
+public class VerifoneVx690CardSwipper implements CardSwipper {
 
     private static VerifoneVx690CardSwipper verifoneVx690CardSwipper = null;
 
