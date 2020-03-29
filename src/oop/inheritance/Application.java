@@ -1,6 +1,7 @@
 package oop.inheritance;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 import oop.inheritance.data.Card;
 import oop.inheritance.data.CommunicationType;
@@ -84,31 +85,14 @@ public class Application {
     }
 
     private TransactionResponse sendSale(Transaction transaction) {
-        Ethernet ethernet = abstractTPVFactory.getEthernet();
-        Modem modem = abstractTPVFactory.getModem();
-        GPS gps = abstractTPVFactory.getGPS();
-        TransactionResponse transactionResponse = null;
+        Map<CommunicationType, CommunicationDevice> communicationDeviceMap = abstractTPVFactory.getCommunicationDeviceMap();
 
-        switch (communicationType) {
-            case ETHERNET:
-                ethernet.open();
-                ethernet.send(transaction);
-                transactionResponse = ethernet.receive();
-                ethernet.close();
-                break;
-            case GPS:
-                gps.open();
-                gps.send(transaction);
-                transactionResponse = gps.receive();
-                gps.close();
-                break;
-            case MODEM:
-                modem.open();
-                modem.send(transaction);
-                transactionResponse = modem.receive();
-                modem.close();
-                break;
-        }
+        CommunicationDevice communicationDevice = communicationDeviceMap.get(CommunicationType.ETHERNET);
+
+        communicationDevice.open();
+        communicationDevice.send(transaction);
+        TransactionResponse transactionResponse = communicationDevice.receive();
+        communicationDevice.close();
 
         return transactionResponse;
     }

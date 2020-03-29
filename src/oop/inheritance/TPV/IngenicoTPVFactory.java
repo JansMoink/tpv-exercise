@@ -1,5 +1,9 @@
 package oop.inheritance.TPV;
 
+import java.util.Map;
+import java.util.HashMap;
+
+import oop.inheritance.data.CommunicationType;
 import oop.inheritance.ingenico.*;
 
 public class IngenicoTPVFactory extends AbstractTPVFactory{
@@ -25,18 +29,14 @@ public class IngenicoTPVFactory extends AbstractTPVFactory{
     }
 
     @Override
-    public Ethernet getEthernet() {
-        return IngenicoEthernet.getInstance();
-    }
+    public Map<CommunicationType, CommunicationDevice> getCommunicationDeviceMap() {
+        Map<CommunicationType, CommunicationDevice> communicationDeviceEnumMap = new HashMap<>();
 
-    @Override
-    public GPS getGPS() {
-        return IngenicoGPS.getInstance();
-    }
+        communicationDeviceEnumMap.put(CommunicationType.ETHERNET, IngenicoEthernet.getInstance());
+        communicationDeviceEnumMap.put(CommunicationType.GPS, IngenicoGPS.getInstance());
+        communicationDeviceEnumMap.put(CommunicationType.MODEM, IngenicoGPS.getInstance());
 
-    @Override
-    public Modem getModem() {
-        return IngenicoModem.getInstance();
+        return communicationDeviceEnumMap;
     }
 
     @Override

@@ -1,5 +1,9 @@
 package oop.inheritance.TPV;
 
+import java.util.Map;
+import java.util.HashMap;
+
+import oop.inheritance.data.CommunicationType;
 import oop.inheritance.verifone.vx520.*;
 
 public class Verifonevx520TPVFactory extends AbstractTPVFactory {
@@ -24,18 +28,14 @@ public class Verifonevx520TPVFactory extends AbstractTPVFactory {
     }
 
     @Override
-    public Ethernet getEthernet() {
-        return VerifoneVx520Ethernet.getInstance();
-    }
+    public Map<CommunicationType, CommunicationDevice> getCommunicationDeviceMap() {
+        Map<CommunicationType, CommunicationDevice> communicationDeviceEnumMap = new HashMap<>();
 
-    @Override
-    public GPS getGPS() {
-        return VerifoneVx520GPS.getInstance();
-    }
+        communicationDeviceEnumMap.put(CommunicationType.ETHERNET, VerifoneVx520Ethernet.getInstance());
+        communicationDeviceEnumMap.put(CommunicationType.GPS, VerifoneVx520GPS.getInstance());
+        communicationDeviceEnumMap.put(CommunicationType.MODEM, VerifoneVx520Modem.getInstance());
 
-    @Override
-    public Modem getModem() {
-        return VerifoneVx520Modem.getInstance();
+        return communicationDeviceEnumMap;
     }
 
     @Override

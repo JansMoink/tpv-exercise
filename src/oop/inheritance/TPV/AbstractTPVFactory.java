@@ -1,5 +1,8 @@
 package oop.inheritance.TPV;
 
+import java.util.Map;
+
+import oop.inheritance.data.CommunicationType;
 import oop.inheritance.data.SupportedTerminal;
 
 public abstract class AbstractTPVFactory {
@@ -27,11 +30,7 @@ public abstract class AbstractTPVFactory {
 
     public abstract Keyboard getKeyboard();
 
-    public abstract Ethernet getEthernet();
-
-    public abstract GPS getGPS();
-
-    public abstract Modem getModem();
+    public abstract Map<CommunicationType, CommunicationDevice> getCommunicationDeviceMap();
 
     public abstract Printer getPrinter();
 

@@ -1,10 +1,10 @@
 package oop.inheritance.verifone.v240m;
 
-import oop.inheritance.TPV.Ethernet;
+import oop.inheritance.TPV.CommunicationDevice;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
 
-public class VerifoneV240mEthernet implements Ethernet {
+public class VerifoneV240mEthernet implements CommunicationDevice {
 
     private static VerifoneV240mEthernet verifoneV240mEthernet = null;
 

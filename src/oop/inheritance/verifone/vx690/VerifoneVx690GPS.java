@@ -1,10 +1,10 @@
 package oop.inheritance.verifone.vx690;
 
-import oop.inheritance.TPV.GPS;
+import oop.inheritance.TPV.CommunicationDevice;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
 
-public class VerifoneVx690GPS implements GPS {
+public class VerifoneVx690GPS implements CommunicationDevice {
     private static VerifoneVx690GPS verifoneVx690GPS = null;
 
     private VerifoneVx690GPS(){
